@@ -1,0 +1,271 @@
+/* =========================
+   Base responsive layout
+========================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.form-body {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 15px;
+  overflow: hidden;
+}
+
+#pagebg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: 0;
+}
+
+.form-body .row,
+.form-holder,
+.form-content,
+.form-items {
+  position: relative;
+  z-index: 2;
+}
+
+.form-body .row {
+  width: 100%;
+  margin: 0;
+  justify-content: center;
+}
+
+.form-holder {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.form-content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-content .form-items {
+  width: 100%;
+  max-width: 900px;
+  text-align: center;
+  padding: 20px;
+}
+
+/* =========================
+   Logo
+========================= */
+
+.website-logo-inside {
+  margin-bottom: 24px;
+}
+
+.website-logo-inside img,
+.logo-size {
+  max-width: 100%;
+  height: auto !important;
+  width: min(512px, 100%);
+  display: block;
+  margin: 0 auto;
+}
+
+/* =========================
+   Typography
+========================= */
+
+.form-content h3 {
+  margin-bottom: 14px;
+  font-size: clamp(32px, 6vw, 68px);
+  line-height: 1.1;
+  font-weight: 700;
+}
+
+.form-content p {
+  margin-bottom: 28px;
+  font-size: clamp(16px, 2.2vw, 24px);
+  line-height: 1.5;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* =========================
+   Button
+========================= */
+
+.btn-buy {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 28px;
+  min-height: 52px;
+  border-radius: 999px;
+  border: none;
+  font-weight: 600;
+  font-size: clamp(14px, 1.8vw, 18px);
+  color: #ffffff;
+  text-decoration: none;
+  background: linear-gradient(180deg, #3a3a3a, #1f1f1f);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.2),
+    0 4px 10px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-buy .icon {
+  color: #39ff14;
+  font-size: clamp(16px, 2vw, 20px);
+  line-height: 1;
+}
+
+.btn-buy:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.5);
+}
+
+/* =========================
+   Social icons
+========================= */
+
+.other-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0px;
+  flex-wrap: wrap;
+}
+
+.other-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  text-decoration: none;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.other-links a i {
+  font-size: 22px;
+}
+
+.other-links a:hover {
+  transform: translateY(-2px);
+}
+
+/* =========================
+   Tablet
+========================= */
+
+@media (max-width: 991.98px) {
+  .form-body {
+    padding: 40px 20px;
+  }
+
+  .form-content .form-items {
+    max-width: 700px;
+    padding: 20px 18px;
+  }
+}
+
+/* =========================
+   Mobile
+========================= */
+
+@media (max-width: 767.98px) {
+  .form-body {
+    padding: 24px 16px;
+  }
+
+  .form-content .form-items {
+    max-width: 100%;
+    padding: 10px 6px;
+  }
+
+  .website-logo-inside {
+    margin-bottom: 18px;
+  }
+
+  .form-content h3 {
+    margin-bottom: 12px;
+  }
+
+  .form-content p {
+    margin-bottom: 22px;
+  }
+
+  .btn-buy {
+    width: 100%;
+    max-width: 260px;
+    padding: 12px 22px;
+  }
+
+  .other-links {
+    gap: 10px;
+  }
+
+  .other-links a {
+    width: 40px;
+    height: 40px;
+  }
+
+  .other-links a i {
+    font-size: 20px;
+  }
+}
+
+/* =========================
+   Small mobile
+========================= */
+
+@media (max-width: 480px) {
+  .form-body {
+    padding: 20px 12px;
+  }
+
+  .form-content .form-items {
+    padding: 0;
+  }
+
+  .btn-buy {
+    max-width: 220px;
+    min-height: 48px;
+  }
+
+  .other-links a {
+    width: 38px;
+    height: 38px;
+  }
+
+  .other-links a i {
+    font-size: 18px;
+  }
+}
+
+.fcolor {
+  color: white;
+}
